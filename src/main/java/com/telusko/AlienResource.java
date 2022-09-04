@@ -27,7 +27,7 @@ public class AlienResource {
 	@RequestMapping(path = "/aliens", produces = { "application/xml", "application/json" })
 	public List<Alien> fetchAliens() {
 		laptop.compile();
-		
+		System.out.println("fetchAliens");
 		List<Alien> aliens = (List<Alien>) repo.findAll();
 
 		return aliens;
