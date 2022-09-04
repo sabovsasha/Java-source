@@ -58,14 +58,7 @@ public class AlienResource {
 		Alien alien = repo.findById(id).orElse(new Alien());
 		mv.addObject(alien);
 		return mv;
-	}
-
-//	@RequestMapping("/alien/{id}")
-//	@ResponseBody
-//	public String getAliensById(@PathVariable int id) {
-//		return repo.findById(id).orElse(new Alien()).toString();//	
-//	}
-	
+	}	
 	
 	@RequestMapping(path = "/alien/{id}", produces = { "application/xml", "application/json" })
 	@ResponseBody
